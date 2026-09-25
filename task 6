@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(){
+float temperature, pressure;
+printf("enter temperature");
+scanf("%f", &temperature);
+printf("enter pressure");
+scanf("%f", &pressure);
+if (temperature>100 || pressure>250) {
+printf("enter shut down");
+}
+else if(temperature>=85 && temperature<=100 && pressure>=200 && pressure<=250){
+printf("enter warning mode");
+}
+else {
+printf("enter normal operation");
+return 0;
+}
