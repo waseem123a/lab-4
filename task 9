@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+int numberofpeople, combinedweight;
+printf("enter number of people");
+scanf("%d",&numberofpeople);
+printf("enter combined weight");
+scanf("%d", & combinedweight);
+if (combinedweight > 1000){
+printf("entry denied: over weight");
+}
+else if(numberofpeople > 10){
+printf("entry denied: people limit exceeded");
+}
+else{
+printf("elevator can operate normally");
+}
+return 0;
+}
