@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+float CGPA,monthlyincome;
+printf("enter CGPA ");
+scanf("%f",&CGPA);
+printf("enter monthly income");
+scanf("%f",&monthlyincome);
+if (CGPA>3.7 && monthlyincome<50000){
+printf("enter full scholarship");
+}
+else if(CGPA>3.3 && monthlyincome<10000){
+printf("enter half scholarship");
+}
+else{
+printf("enter no scholarship");
+}
+return 0;
+}
