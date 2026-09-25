@@ -1,0 +1,60 @@
+#include <stdio.h>
+int main() {
+int zone;
+float speed;
+float fine = 0.0;
+float base_fine = 1000.0;
+printf("Select Zone Type:\n");
+printf("1. School Zone (Limit: 30 km/h)\n");
+printf("2. Highway (Limit: 100 km/h)\n"); 
+printf("3. Residential Area (Limit: 50 km/h)\n"); 
+printf("Enter zone choice (1-3): ");
+scanf("%d", &zone);
+printf("Enter driver's speed (km/h): ");
+scanf("%f", &speed);
+switch (zone) {
+case 1:
+if (speed > 50) { 
+fine=base_fine * 2;
+} 
+else if (speed > 30) { 
+fine =base_fine; 
+} 
+else { 
+fine = 0.0;
+}
+break;
+case 2:
+if (speed > 120) { 
+fine=base_fine * 2;
+} 
+else if (speed > 100) {
+fine=base_fine;
+} 
+else {
+fine = 0.0;
+}
+break;
+case 3:
+if (speed > 70) {
+fine=base_fine * 2;
+} 
+else if (speed > 50) {
+fine=base_fine;
+} 
+else {
+fine = 0.0; 
+}
+break;
+default:
+printf("Invalid zone choice selection.\n");
+return 1;
+}
+if (fine > 0) {
+printf("Traffic Fine Amount: Rs. %.2f\n", fine);
+}
+else {
+printf("No fine. Speed is within the limit!\n");
+}
+return 0;
+}
